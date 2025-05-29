@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 币种名称，运行时由 Activity 设置 -->
+        <TextView
+            android:id="@+id/currency_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp"
+            android:text="币种名称"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- 输入人民币金额 -->
+        <EditText
+            android:id="@+id/inputRMB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:hint="请输入人民币金额"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal" />
+
+        <!-- 计算按钮：点击时调用 CalculateActivity.onclick(View) -->
+        <Button
+            android:id="@+id/btnConvert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:onClick="onclick"
+            android:text="计算" />
+
+        <!-- 显示计算结果 -->
+        <TextView
+            android:id="@+id/showResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="#E91E63"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</ScrollView>
+
